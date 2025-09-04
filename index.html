@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Shopping List</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-bag-shopping"></i> Elegant Shopping List</h1>
+            <p>Track your shopping items with style</p>
+        </header>
+
+        <div class="card input-section">
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <input type="text" id="itemName" placeholder="Item name">
+                    <i class="fas fa-tag"></i>
+                </div>
+                <div class="input-wrapper">
+                    <input type="number" id="itemPrice" placeholder="Price ($)" step="0.01" min="0">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <button id="addItemBtn">
+                    <span>Add Item</span>
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card summary">
+            <div class="summary-content">
+                <div class="total-items">
+                    <i class="fas fa-cubes"></i>
+                    <div>
+                        <span class="label">Total Items</span>
+                        <span id="itemsCount">0</span>
+                    </div>
+                </div>
+                <div class="total-price">
+                    <i class="fas fa-receipt"></i>
+                    <div>
+                        <span class="label">Total Amount</span>
+                        $<span id="totalAmount">0.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shopping-list">
+            <h2><i class="fas fa-list-check"></i> Your Items</h2>
+            <ul id="itemsList">
+                <div class="empty-state">
+                    <i class="fas fa-shopping-basket"></i>
+                    <p>Your shopping list is empty</p>
+                    <p>Add some items to get started</p>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div id="notification" class="notification hidden">
+        <span id="notificationText"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
